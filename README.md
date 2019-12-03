@@ -1,6 +1,6 @@
 # STAT180Project
 
-# Using the 'tidyverse' package 'ggplot2' to visualize data.
+Using the 'tidyverse' package 'ggplot2' to visualize data.
 
 # R packages needed:
 
