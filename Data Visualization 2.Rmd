@@ -1,0 +1,72 @@
+---
+title: "Data Visualization 2-Using Diamonds Dataset Example"
+author: "Xuefei Li"
+date: "02/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message=FALSE,warning=FALSE,fig.height=4)
+```
+
+```{r, message=FALSE, warning=FALSE}
+library(ggplot2)
+data(diamonds)
+library(dplyr)
+library(gapminder)
+data(gapminder)
+gapminder <- mutate(gapminder, 
+                    log10Pop = log10(pop), 
+                    log10GdpPercap = log10(gdpPercap))
+```
+
+\scriptsize
+
+```{r}
+p <- ggplot(diamonds,aes(x=carat,y=price,colour=cut)) +
+  geom_point()
+names(p)
+p
+```
+
+## Data
+
+\scriptsize
+
+```{r}
+set.seed(123)
+subdiamonds <- sample_n(diamonds,size=100)
+p <- p %+% subdiamonds
+p
+```
+
+## Different data in different layers
+
+\small
+
+\scriptsize
+
+```{r}
+p + geom_smooth(data=diamonds, method="lm")
+```
+
+
+## Aesthetic mappings
+
+\small
+    
+\scriptsize
+
+```{r}
+p + geom_point(aes(color=clarity))   
+```
+
+## Setting vs mapping 
+
+\small
+
+\scriptsize
+
+```{r}
+ggplot(subdiamonds,aes(x=carat,y=price)) + geom_point(color="darkblue")
+```
