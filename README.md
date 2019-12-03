@@ -1,4 +1,4 @@
-# STAT180Project
+# STAT 180 Project
 
 Using the 'tidyverse' package 'ggplot2' to visualize data.
 
