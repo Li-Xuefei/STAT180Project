@@ -1,2 +1,13 @@
-# STAT180Project
-STAT 180 GitHub Project Repository
+# STAT 180 Project
+
+Using the 'tidyverse' package 'ggplot2' to visualize data.
+
+# R packages needed:
+
+ggplot2
+
+tidyverse
+
+gapminder
+
+gapminder
